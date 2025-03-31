@@ -1,4 +1,10 @@
-## Hi there 👋
+## Hello World
+
+This should be a random collection of things I am working on, more to document work for myself than anything else.
+
+### For Embedded Hardware Development
+
+[Setting up my development toolchain.](Embedded/EnvironmentSetup.md)
 
 <!--
 **pbuller212/pbuller212** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
