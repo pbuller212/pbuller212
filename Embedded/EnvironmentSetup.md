@@ -46,4 +46,19 @@ cd STM32Cube_FW_F4_V1.28.0/
     usbipd: info: Detected networking mode 'nat'.
     usbipd: info: Using IP address 172.29.144.1 to reach the host.
     ```
-3. Finding the serial port the board is using. 
+3. Finding the serial port the board is using. After plugging in the device, type in ```dmesg``` at your linux prompt and the output will be something like:
+```
+[121172.078858] vhci_hcd vhci_hcd.0: devid(131074) speed(2) speed_str(full-speed)
+[121172.079828] vhci_hcd vhci_hcd.0: Device attached
+[121172.373269] vhci_hcd: vhci_device speed not set
+[121172.454866] usb 1-1: new full-speed USB device number 3 using vhci_hcd
+[121172.536286] vhci_hcd: vhci_device speed not set
+[121172.607612] usb 1-1: SetAddress Request (3) to port 0
+[121172.647966] usb 1-1: New USB device found, idVendor=0483, idProduct=374b, bcdDevice= 1.00
+[121172.647973] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[121172.647974] usb 1-1: Product: STM32 STLink
+[121172.647976] usb 1-1: Manufacturer: STMicroelectronics
+[121172.647977] usb 1-1: SerialNumber: 066CFF484971754867024738
+[121172.661115] cdc_acm 1-1:1.2: ttyACM0: USB ACM device
+```
+What your are looking for is the ttyACM0, or something similar.
